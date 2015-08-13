@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -63,6 +64,7 @@ namespace ImageImporter
             else
             {
                 Console.WriteLine("Successfully imported {0} {1}.", count, (count == 1 ? "image" : "images"));
+                Process.Start(fullDestinationPathWithDateFolder);
             }
         }
 
